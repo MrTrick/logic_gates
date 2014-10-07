@@ -20,13 +20,12 @@ var p = new Processing(canvas, function(processing) {
   var out_link_length = 28;
   var stroke = 45;
 
-
-  var a = new Bar({ origin:{x:100,y:center - input_spacing/2}, length:100, angle:0, stroke:[255,0,0]});
-  var b = new Bar({ origin:{x:100,y:center + input_spacing/2}, length:100, angle:0, stroke:[150,0,0]});
-  var a_link = new Bar({ length:in_link_length, stroke:[0,255,0]});
-  var b_link = new Bar({ length:in_link_length, stroke:[0,255,0]});
-  var o_link = new Bar({ length:out_link_length, stroke:[0,150,150]});
-  var o = new Bar({ length:100, stroke:[0,0,255]});
+  var a = new Bar({ origin:{x:100,y:center - input_spacing/2}, length:100, angle:0, stroke:processing.color(255,0,0)});
+  var b = new Bar({ origin:{x:100,y:center + input_spacing/2}, length:100, angle:0, stroke:processing.color(150,0,0)});
+  var a_link = new Bar({ length:in_link_length, stroke:processing.color(0,255,0)});
+  var b_link = new Bar({ length:in_link_length, stroke:processing.color(0,255,0)});
+  var o_link = new Bar({ length:out_link_length, stroke:processing.color(0,150,150)});
+  var o = new Bar({ length:100, stroke:processing.color(0,0,255)});
   
   var t=0, outputs=[];
   processing.draw = function() {

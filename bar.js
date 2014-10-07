@@ -66,8 +66,8 @@ var Bar = function(options) {
     * Draw the bar on the Processing screen.
     */
    this.draw = function(processing) {
-     processing.fill.apply(processing, this.fill);
-     processing.stroke.apply(processing, this.stroke);
+     processing.fill(this.fill);
+     processing.stroke(this.stroke);
      var end = this.end();
      var cos45 = Math.cos(this.angle + Math.PI/4), 
          sin45 = Math.sin(this.angle + Math.PI/4);
