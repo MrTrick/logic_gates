@@ -52,12 +52,12 @@ var p = new Processing(canvas, function(processing) {
 
     //Drawing
     processing.background(224);
-    a.draw();
-    b.draw();    
-    a_link.draw();
-    b_link.draw();
-    o_link.draw();
-    o.draw();
+    a.draw(processing);
+    b.draw(processing);    
+    a_link.draw(processing);
+    b_link.draw(processing);
+    o_link.draw(processing);
+    o.draw(processing);
     
     //Record the output position
     outputs.push(o.origin.x);
